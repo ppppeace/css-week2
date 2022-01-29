@@ -1,0 +1,163 @@
+body{
+    background-color: #bda464;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 100;
+    color: black;
+    font-size: 115%;
+    width:99%;
+}
+
+h1{
+    color: blue;
+    animation-name: MoveInTop;
+    animation-duration: 2s;
+}
+.color{
+    animation-duration: 10s;
+    animation-name: color;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+li{
+    color: #00FFFF;
+}
+
+p{
+    background-color: orange;
+}
+
+h3{
+    border: 5px red solid;
+    animation-name: fontcolor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+abbr{
+    font-weight: bold; 
+    text-decoration: underline;
+}
+
+.explanation{
+    color: red;
+}
+
+#zen-benefits p{
+    background-color: pink;
+}
+
+h2 + ul{
+    background-color: red;
+}
+
+p em{
+    color: red;
+    font-weight: bold;
+}
+
+a{
+    color: blue;
+}
+
+:visited{
+    color: green;
+}
+
+a:active{
+    color: red;
+}
+
+@keyframes MoveInTop{
+    0% {
+        opacity:0;
+        transform: translateY(-3rem);
+    }
+    75% {
+        opacity:0.75;
+        transform: translateY(0.5rem);
+    }  
+    100% {
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+@keyframes color {
+    0%   {background-color:pink;}
+    20%  {background-color:violet;}
+    40%  {background-color:lightsalmon; }
+    60%  {background-color:palegreen; }
+    80% {background-color:lemonchiffon; }
+    100% {background-color:lightcyan; }
+  }
+
+  @keyframes fontcolor {
+    0%   {color:pink;}
+    20%  {color:mistyrose;}
+    40%  {color:antiquewhite; }
+    60%  {color:palegreen; }
+    80% {color:lemonchiffon; }
+    100% {color:lightcyan; }
+  }
+
+  .frame {
+    width: 2000px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .frame.one {
+    outline: 10px dashed hotpink;
+    border-radius: 10rem;
+    box-shadow: 0 0 0 10px paleturquoise;
+    animation: 4s frameOne ease infinite;
+  }
+  
+  @keyframes frameOne {
+    to {
+      outline-color: limegreen;
+      box-shadow: 0 0 0 10px gold;
+    }
+  }
+  
+  #frame{
+    margin: 20px 10px;
+  }
+
+  .message {
+    line-height: 50px;
+    color: white;
+    float: left;
+    margin-right: 2%;
+  }
+  
+  .view {
+    background-color: black;
+    color: white;
+    width: 2000px;
+    height: 50px;
+    overflow: hidden;
+  }
+  
+  .layer {
+    background-color: lawngreen;
+    border-radius: 10rem;
+    background-image: linear-gradient(to right,
+      rgba(0, 0, 0, .9) 25%,
+      rgba(0, 0, 0, .1) 50%,
+      rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+    -webkit-animation: 4s linear 0s infinite alternate move;
+            animation: 4s linear 0s infinite alternate move;
+  }
+  
+  @-webkit-keyframes move { from { margin-left: -10%; } to { margin-left: 95%; }  }
+          @keyframes move { from { margin-left: -10%; } to { margin-left: 95%; } }
+ 
